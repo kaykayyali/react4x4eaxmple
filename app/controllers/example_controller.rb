@@ -15,7 +15,7 @@ class ExampleController < ApplicationController
         url: entry.entry_id,
         image: entry.enclosure_url
       }
-      if entryArray.count < 6
+      if entryArray.count < 9
         entryArray.push(newEntry)
       end
     end
