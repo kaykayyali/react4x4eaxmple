@@ -1,3 +1,66 @@
 // Place all the styles related to the example controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#first {
+  background-color: #FF6060;
+}
+#second {
+  background-color: #60D0F3;
+}
+section {
+  height: 800px;
+}
+body {
+  margin-top: 50px;
+}
+.viewBox {
+  height: 250px;
+  width: 250px;
+  border-radius: 5px;
+  -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+  transition: width 2s, height 2s, background-color 2s, transform 2s;
+}
+.rssBox {
+  height: 510px;
+  width: 750px;
+}
+nav.navbar.navbar-default {
+  margin-bottom: 0;
+  background-color: #60D0F3;
+  border: none;
+  color: #FF6060;
+  -webkit-transition: background-color 1s;
+  transition: background-color 1s;
+  border-bottom: 1px solid slategrey;
+}
+.panel.panel-default {
+  border-radius: 20px;
+}
+.panel-body {
+  border-radius: 20px;
+}
+.rssBox a {
+  z-index: 99999;
+  color: white;
+}
+.overlay {
+  z-index: 10;
+  position: absolute;
+  left: 0;
+  background:rgba(0,0,0,.75);
+  opacity:0;
+  width: 0px;
+  height: 0px;
+  -webkit-transition: width 0.5s, height 0.5s, opacity 2s,  transform 2s;
+  transition: width 0.5s, height 0.5s, opacity 2s,  transform 2s;
+}
+.viewBox:hover {
+  -webkit-transform: rotate(0.5deg);
+  transform: rotate(0.5deg);
+}
+.viewBox:hover .overlay {
+    z-index: 10;
+    opacity: .4;
+    height: 100%;
+    width: 250px;
+}

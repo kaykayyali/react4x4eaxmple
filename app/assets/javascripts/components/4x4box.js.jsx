@@ -26,22 +26,22 @@ var RSSBox = React.createClass({
     window.clearInterval(pollInterval);
   },
   render: function() {
+    boxesArray = []
+    this.state.data.forEach(function(object){
+      newBox = {
+        title: object.title,
+        imageurl: object.image,
+        url: object.url
+      }
+      boxesArray.push(newBox)
+    })
     return (
-      <div className="rssBox container-fluid">
-        <div className="row">
-          <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
-            Content
-          </div>
-          <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
-            Content
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
-            Content
-          </div>
-          <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
-            Content
+      <div className="rssBox center-block">
+        <div className="container-fluid">
+          <div className="row">
+              {boxesArray.map(function(box, i){
+                  return <ViewBox image={box.imageurl} title={box.title} url={box.url} key={i}/>;
+                })}
           </div>
         </div>
       </div>

@@ -15,8 +15,10 @@ class ExampleController < ApplicationController
         url: entry.entry_id,
         image: entry.enclosure_url
       }
-      entryArray.push(newEntry)
+      if entryArray.count < 6
+        entryArray.push(newEntry)
+      end
     end
-    render status: 200, json: feedArray
+    render status: 200, json: entryArray
   end
 end
