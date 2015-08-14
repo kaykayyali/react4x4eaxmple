@@ -3,6 +3,10 @@ class ExampleController < ApplicationController
 
     render 'example_page'
   end
+  def example
+    render 'example'
+
+  end
 
   def genFeed
     url = "http://www.nasa.gov/rss/dyn/breaking_news.rss"
@@ -15,7 +19,7 @@ class ExampleController < ApplicationController
         url: entry.entry_id,
         image: entry.enclosure_url
       }
-      if entryArray.count < 8
+      if entryArray.count < 4
         entryArray.push(newEntry)
       end
     end

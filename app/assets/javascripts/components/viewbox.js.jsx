@@ -1,6 +1,8 @@
 var ViewBox = React.createClass({
   getInitialState: function() {
-   return {liked: false};
+   return {
+     liked: false
+   };
  },
   handleClick: function(event) {
    console.log("Clicked")

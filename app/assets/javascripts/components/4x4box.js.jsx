@@ -7,7 +7,6 @@ var RSSBox = React.createClass({
       dataType: 'json',
       cache: false,
       success: function(data) {
-      console.log(data)
         this.setState({data: data});
       }.bind(this),
       error: function(xhr, status, err) {
@@ -35,7 +34,7 @@ var RSSBox = React.createClass({
       }
       boxesArray.push(newBox)
     })
-    return (
+    return ( 
       <div className="rssBox center-block">
         <div className="container-fluid">
           <div className="row">
