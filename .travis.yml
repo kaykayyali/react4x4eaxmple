@@ -1,0 +1,9 @@
+language: ruby
+rvm:
+ - 2.2
+ - jruby
+ - rbx-2
+notifications:
+  webhooks:
+    urls:
+      - https://hooks-aws11g07uds05.dev.glip.net/webhook/3f585072-92db-4e09-bc22-e0edde3a9410
