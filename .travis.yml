@@ -4,10 +4,9 @@ rvm:
  - jruby
  - rbx-2
 notifications:
-   webhooks:
+  webhooks:
     urls:
-      - https://hooks-aws11g07uds05.dev.glip.net/webhook/3f585072-92db-4e09-bc22-e0edde3a9410
+      - https://aws02-g23-uds01.dev.glip.net:22815/webhook/4062e0c5-055a-4f0d-b4d8-49ee99bb152f
     on_success: always # default: always
     on_failure: always # default: always
-    on_start: always    # default: never
-
+    on_start: always   # default: never
