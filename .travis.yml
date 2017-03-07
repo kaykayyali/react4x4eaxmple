@@ -6,7 +6,7 @@ rvm:
 notifications:
   webhooks:
     urls:
-      - http://devproxy-public.dev.glip.net/webhook-kaysser/4062e0c5-055a-4f0d-b4d8-49ee99bb152f
+      - https://hooks-ft3.dev.glip.net/webhook/f87577e3-3d25-4563-ac02-8f24c865283c
     on_success: always # default: always
     on_failure: always # default: always
-    on_start: always   # default: never
+    on_start: always   # default: always
